@@ -2,7 +2,7 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 
-public class Temp250 extends HttpServlet              //Download Servlet
+public class Temp250 extends HttpServlet              //Surf Servlet
 {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException
     {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function swing()
+{
+var str = document.getElementById("name").value
+if(str == "")
+{
+alert("What the Hell?! Atleast Enter something!");
+return;
+}
+window.open("Temp253?name="+str);
+}
+
+function loadImage()
+{
+var pic = document.getElementById("pic");
+if(pic.src.match("rk"))
+{
+pic.src = "rish.jpg";
+}
+else
+{
+pic.src = "rk.gif";
+}
+}
+
+function now()
+{
+var str = document.getElementById("here").title.value;
+alert(str);
+var xmlhttp;
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "Temp254?title="+str, true);
+xmlhttp.send();
+}
+
+</script>
+</head>
+
+<body>
+
+<image src = "rk.gif" id = "pic" width = "300" height = "283" onclick = "loadImage()" align = "center">
+<br>
+Search
+<form method = "GET" action = "Temp250">
+<input name = "name" id = "name" autocomplete = "off" align = "center"></input>
+<input type = "Submit" value = "Surf" align = "center">
+</form>
+<button type = "button" onclick = "swing()" align = "center">Download</button>
+<form method = "POST" id = "here" action = "Temp249" enctype = "multipart/form-data">
+Select File : 
+<input type = "file" name = "title" id = "title">
+<input type = "Submit" value = "Upload" align = "center">
+</form>
+<br>
+<button type = "button" onclick = "now()">See</button>
+<div id = "ho"></div>
+</body>
+</html>
